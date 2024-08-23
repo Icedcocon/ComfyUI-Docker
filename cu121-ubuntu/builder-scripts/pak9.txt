@@ -1,0 +1,9 @@
+# For Layer Style
+loguru
+typer_config
+google-generativeai
+image-reward
+blend_modes
+blind-watermark
+pyzbar
+psd-tools
