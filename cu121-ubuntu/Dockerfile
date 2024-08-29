@@ -105,6 +105,19 @@ COPY builder-scripts/pak9.txt  /builder-scripts/pak9.txt
 RUN pip install -r /builder-scripts/pak9.txt
 
 
+COPY builder-scripts/pak11.txt  /builder-scripts/pak11.txt
+
+# fairseq need pip <= 24.0 
+# ref https://github.com/facebookresearch/fairseq/issues/5518
+RUN python -m pip install pip==24.0 \
+&& pip install -r /builder-scripts/pak11.txt
+
+# ffmpeg-python for echo mimic ffmpeg errors， yt_dlp for youtube-dl-comfyui, gguf for gguf
+# cpm-kernels for KwaiKolorsWrapper (Kolors)
+RUN pip uninstall  --yes ffmpeg-python python-ffmpeg \
+&& pip install ffmpeg-python yt_dlp gguf cpm-kernels
+
+
 ################################################################################
 
 # Clean up any unnecessary files to reduce image size

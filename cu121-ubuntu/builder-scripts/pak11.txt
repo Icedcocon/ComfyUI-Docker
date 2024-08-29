@@ -1,0 +1,21 @@
+# For RVC
+fairseq
+faiss-cpu
+pydub>=0.25.1
+tensorboardX
+json5
+Markdown
+praat-parselmouth>=0.4.2
+resampy>=0.4.2
+tensorboard
+tornado>=6.1
+Werkzeug>=2.2.3
+uc-micro-py>=1.0.1
+pyasn1>=0.4.8
+pyasn1-modules>=0.2.8
+pyworld==0.3.2
+torchcrepe==0.0.20
+torchfcpe
+ffmpy==0.3.1
+onnxruntime; sys_platform == 'darwin'
+av
